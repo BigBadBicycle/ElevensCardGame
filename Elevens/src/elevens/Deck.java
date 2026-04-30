@@ -58,7 +58,14 @@ return size;
 */
 public void shuffle()
 {
-ArrayList<Card> temp = new ArrayList<Card>(cards);
+ArrayList<Card> temp = new ArrayList<Card>();
+while(cards.size()>0) {
+	int index = (int)(Math.random()*cards.size());
+	Card randomCard = cards.get(index);
+	cards.remove(index);
+	temp.add(randomCard);
+}
+cards = temp;
 
 }
 /**
@@ -69,7 +76,6 @@ ArrayList<Card> temp = new ArrayList<Card>(cards);
 public Card deal()
 {
 Card temp = cards.get(0);
-cards.remove(0);
 size--;
 return temp;
 }

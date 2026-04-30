@@ -41,14 +41,7 @@ public Card(String cardRank, String cardSuit, int cardPointValue)
 {
 	rank = cardRank;
 	suit = cardSuit;
-	
-	if(rank.equals(Card.JOKER) || rank.equals(Card.KING) || rank.equals(Card.QUEEN)) {
-		pointValue = 0;
-	} else if(rank.equals(Card.ACE)) {
-		pointValue = 1;
-	} else{
 	pointValue = cardPointValue;
-	}
 	
 }
 /**
